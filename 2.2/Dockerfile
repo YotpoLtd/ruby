@@ -1,8 +1,8 @@
 FROM buildpack-deps:jessie
 
 ENV RUBY_MAJOR 2.2
-ENV RUBY_VERSION 2.2.3
-ENV RUBY_DOWNLOAD_SHA256 df795f2f99860745a416092a4004b016ccf77e8b82dec956b120f18bdc71edce
+ENV RUBY_VERSION 2.2.4
+ENV RUBY_DOWNLOAD_SHA256 b6eff568b48e0fda76e5a36333175df049b204e91217aa32a65153cc0cdcb761
 ENV RUBYGEMS_VERSION 2.5.1
 
 # skip installing gem documentation
@@ -31,7 +31,7 @@ RUN apt-get update \
 ENV GEM_HOME /usr/local/bundle
 ENV PATH $GEM_HOME/bin:$PATH
 
-ENV BUNDLER_VERSION 1.11.1
+ENV BUNDLER_VERSION 1.11.2
 
 RUN gem install bundler --version "$BUNDLER_VERSION" \
 	&& bundle config --global path "$GEM_HOME" \

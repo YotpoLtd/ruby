@@ -1,4 +1,4 @@
-FROM buildpack-deps:jessie
+FROM buildpack-deps:trusty
 
 # skip installing gem documentation
 RUN mkdir -p /usr/local/etc \
@@ -7,9 +7,9 @@ RUN mkdir -p /usr/local/etc \
 		echo 'update: --no-document'; \
 	} >> /usr/local/etc/gemrc
 
-ENV RUBY_MAJOR 1.9
-ENV RUBY_VERSION 1.9.3-p551
-ENV RUBY_DOWNLOAD_SHA256 44228297861f4dfdf23a47372a3e3c4c5116fbf5b0e10883417f2379874b55c6
+ENV RUBY_MAJOR 2.1
+ENV RUBY_VERSION 2.1.10
+ENV RUBY_DOWNLOAD_SHA256 5be9f8d5d29d252cd7f969ab7550e31bbb001feb4a83532301c0dd3b5006e148
 ENV RUBYGEMS_VERSION 2.6.11
 
 # some of ruby's build scripts are written in ruby

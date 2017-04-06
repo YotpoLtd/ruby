@@ -3,17 +3,26 @@ services: docker
 
 env:
   - VERSION=2.4 VARIANT=
+  - VERSION=2.4 VARIANT=trusty
+  - VERSION=2.4 VARIANT=xenial
   - VERSION=2.4 VARIANT=slim
   - VERSION=2.4 VARIANT=alpine
   - VERSION=2.3 VARIANT=
+  - VERSION=2.3 VARIANT=trusty
+  - VERSION=2.3 VARIANT=xenial
   - VERSION=2.3 VARIANT=slim
   - VERSION=2.3 VARIANT=alpine
   - VERSION=2.2 VARIANT=
   - VERSION=2.2 VARIANT=slim
   - VERSION=2.2 VARIANT=alpine
   - VERSION=2.1 VARIANT=
+  - VERSION=2.1 VARIANT=trusty
+  - VERSION=2.1 VARIANT=xenial
   - VERSION=2.1 VARIANT=slim
   - VERSION=2.1 VARIANT=alpine
+  - VERSION=1.9 VARIANT=
+  - VERSION=1.9 VARIANT=trusty
+  - VERSION=1.9 VARIANT=xenial
 
 install:
   - git clone --depth 1 https://github.com/docker-library/official-images.git ~/official-images

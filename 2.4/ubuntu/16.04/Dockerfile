@@ -1,4 +1,4 @@
-FROM buildpack-deps:trusty
+FROM buildpack-deps:xenial
 
 # skip installing gem documentation
 RUN mkdir -p /usr/local/etc \

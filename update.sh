@@ -56,7 +56,7 @@ for version in "${versions[@]}"; do
 		s!%%BUNDLER%%!$bundler!g;
 	"
 	echo "$version: $fullVersion; rubygems $rubygems, bundler $bundler; $shaVal"
-	for variant in alpine slim onbuild ''; do
+	for variant in alpine slim onbuild xenial trusty ''; do
 		[ -d "$version/$variant" ] || continue
 		sed -r "$sedStr" "Dockerfile${variant:+-$variant}.template" > "$version/$variant/Dockerfile"
 		if [ "$variant" != 'onbuild' ]; then
